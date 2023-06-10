@@ -23,3 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("fillTextbox", (locator, text) => {
+  cy.get(locator).clear().type(text);
+});
+Cypress.Commands.add("clickElement", (selector) => {
+  cy.get(selector).click();
+});

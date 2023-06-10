@@ -22,7 +22,7 @@ module.exports = defineConfig({
   },
   e2e: {
     setupNodeEvents,
-    watchForFileChanges:true,
+    watchForFileChanges: true,
     //specPattern: ["cypress/e2e_integration/*.js"],
     //specPattern: ["cypress/e2e_integration/feature/*.feature"],
     specPattern: "cypress/e2e_integration/feature/*.feature",

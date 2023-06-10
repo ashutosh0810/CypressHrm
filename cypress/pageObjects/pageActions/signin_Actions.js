@@ -1,5 +1,5 @@
 import signIn_Element from "../pageElements/signIn_Element";
-const locators = require("../../object_Repository.json");
+const locators = require("../../locators_Repo.json");
 
 export default class signin_PO {
   constructor() {
