@@ -1,4 +1,3 @@
-
 {
   "name": "orangehrm_nagp",
   "version": "1.0.0",
@@ -18,6 +17,10 @@
     "allTests-multiBrowser": "npm run allTests-headed -- --browser firefox & npm run allTests-headed -- --browser chrome",
     "allTest-dashBoard": "npx cypress run --record --key 66f0472e-b570-4fe6-92d2-dd12bdfec096"
   },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e_integration/step_Def/*.js",
+    "nonGlobalStepDefinitions": true
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -26,6 +29,6 @@
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^17.2.1",
-    "@cypress/browserify-preprocessor": "latest"
+    "@cypress/browserify-preprocessor": "^3.0.2"
   }
 }
