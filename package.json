@@ -1,0 +1,31 @@
+
+{
+  "name": "orangehrm_nagp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "npx cypress open",
+    "allTests-headless": "npx cypress run",
+    "allTests-headed": "npx cypress run --headed",
+    "allTests-chrome": "npx cypress run --browser chrome",
+    "allTests-chrome-headed": "npx cypress run --browser chrome --headed",
+    "allTests-firefox": "npx cypress run --browser firefox",
+    "allTests-firefox-headed": "npx cypress run --browser firefox --headed",
+    "allTests-edge": "npx cypress run --browser edge",
+    "allTests-edge-headed": "npx cypress run --browser edge --headed",
+    "allTests-multiBrowser": "npm run allTests-headed -- --browser firefox & npm run allTests-headed -- --browser chrome",
+    "allTest-dashBoard": "npx cypress run --record --key 66f0472e-b570-4fe6-92d2-dd12bdfec096"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.14.0",
+    "cypress-xpath": "^2.0.1"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^17.2.1",
+    "@cypress/browserify-preprocessor": "latest"
+  }
+}
