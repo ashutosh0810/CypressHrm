@@ -15,7 +15,8 @@
     "allTests-edge": "npx cypress run --browser edge",
     "allTests-edge-headed": "npx cypress run --browser edge --headed",
     "allTests-multiBrowser": "npm run allTests-headed -- --browser firefox & npm run allTests-headed -- --browser chrome",
-    "allTest-dashBoard": "npx cypress run --record --key 66f0472e-b570-4fe6-92d2-dd12bdfec096"
+    "allTest-dashBoard": "npx cypress run --record --key 66f0472e-b570-4fe6-92d2-dd12bdfec096",
+    "allTest-dashBoard-chrome": "npx cypress run --record --key 66f0472e-b570-4fe6-92d2-dd12bdfec096 --browser chrome"
   },
   "cypress-cucumber-preprocessor": {
     "stepDefinitions": "cypress/e2e_integration/step_Def/*.js",
@@ -25,10 +26,12 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^12.14.0",
+    "cypress-mochawesome-reporter": "^3.5.0",
     "cypress-xpath": "^2.0.1"
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^17.2.1",
-    "@cypress/browserify-preprocessor": "^3.0.2"
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cucumber-html-reporter": "^7.1.0"
   }
 }

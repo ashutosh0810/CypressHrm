@@ -4,7 +4,13 @@
         "password_Txt": "input[name='password']",
         "submit_Btn": "button[type='submit']",
         "forgetPwd_Lnk": ".oxd-text.oxd-text--p.orangehrm-login-forgot-header",
-        "badCredentails_Txt": "p"
+        "badCredentails_Txt": "p",
+        "invalidCred_txt":".oxd-text.oxd-text--p.oxd-alert-content-text",
+        "resetPwdUser_Txt":"input[name='username']" ,
+        "reset_Btn":"button[type='submit']",
+        "cancel_Btn":"button[type='button']",
+        "resetSucces_Txt":".oxd-text.oxd-text--h6.orangehrm-forgot-password-title"
+
     },
     "resetPassword": {
         "userName_Txt": "input[placeholder='Username']",
@@ -12,7 +18,8 @@
         "cancel_Btn": "button[type='button']"
     },
     "leftmenu": {
-        "pimLeft_Btn": "body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > a:nth-child(1) > span:nth-child(2)"
+        "pimLeft_Btn": "body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > a:nth-child(1) > span:nth-child(2)",
+        "adminleft_Btn":"body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2)"
     },
     "pim": {
         "add_Btn": "button[class='oxd-button oxd-button--medium oxd-button--secondary']",
@@ -25,10 +32,18 @@
         "confirmPassword": "div[class='oxd-grid-item oxd-grid-item--gutters'] div[class='oxd-input-group oxd-input-field-bottom-space'] div input[type='password']",
         "submit_Btn": "button[type='submit']"
     },
-    "PersonalDetails": {
-        "maritalstat_Dropdwn": "div[class='orangehrm-horizontal-padding orangehrm-vertical-padding'] div[class='oxd-grid-3 orangehrm-full-width-grid'] div:nth-child(1) div:nth-child(1) div:nth-child(2) div:nth-child(1) div:nth-child(1) div:nth-child(1)",
+    "personalDetails": {
+        "maritalstat_Dropdwn": "body > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > form:nth-child(3) > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1)",
+        "maritalstatOptn-Dropdown":"body > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > form:nth-child(3) > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)",
         "gender_RadioBtn": "body > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > form:nth-child(3) > div:nth-child(5) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > label:nth-child(1) > span:nth-child(2)",
-        "smoker_CheckBx": "div[class='oxd-input-group oxd-input-field-bottom-space'] div div[class='oxd-checkbox-wrapper'] label",
+     
         "save_Btn": "div[class='orangehrm-horizontal-padding orangehrm-vertical-padding'] button[type='submit']"
+    },
+    "admin":{
+        "username_txt":"div[class='oxd-input-group oxd-input-field-bottom-space'] div input[class='oxd-input oxd-input--active']",
+        "search_Btn":"button[type='submit']",
+        "rec":"Record Found",
+        "deleteIcon":".oxd-icon.bi-trash",
+        "yesDelete":"button[class='oxd-button oxd-button--medium oxd-button--label-danger orangehrm-button-margin']"
     }
 }

@@ -1,6 +1,7 @@
 import signIn_Element from "../pageElements/signIn_Element";
 const locators = require("../../locators_Repo.json");
 
+let randomString = Math.random().toString(36).slice(2, 7);
 export default class signin_PO {
   constructor() {
     globalThis.signIn_Elements = new signIn_Element();
@@ -24,5 +25,23 @@ export default class signin_PO {
 
   launchSigninPage() {
     cy.visit(Cypress.env("baseUrl"));
+  }
+
+  validateInvalidCreden() {
+    cy.validateText(locators.loginPage.invalidCred_txt, "Invalid credentials");
+  }
+
+  clickforgetpwd() {
+    cy.clickElement(locators.loginPage.forgetPwd_Lnk);
+  }
+  resetDetailSubmit() {
+    cy.fillTextbox(locators.loginPage.resetPwdUser_Txt, randomString);
+    cy.clickElement(locators.loginPage.reset_Btn);
+  }
+  validateResetSucc() {
+    cy.validateText(
+      locators.loginPage.resetSucces_Txt,
+      "Reset Password link sent successfully"
+    );
   }
 }
