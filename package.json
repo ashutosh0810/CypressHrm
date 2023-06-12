@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "pretest": "rm -rf cypress\reports",
     "cypress:open": "npx cypress open",
     "allTests-headless": "npx cypress run",
     "allTests-headed": "npx cypress run --headed",

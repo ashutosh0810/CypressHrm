@@ -1,6 +1,6 @@
 import pim_Element from "../pageElements/pim_Element";
 const locators = require("../../locators_Repo.json");
-
+const testData = require("../../testData.json");
 let randomString = Math.random().toString(36).slice(2, 7);
 let firstName = "first" + randomString + "Test";
 let middleName = "mid" + randomString + "Test";
@@ -25,12 +25,12 @@ export default class pimPageOject {
 
   enterLoginDetails() {
     cy.log(" username text box is ", randomString);
-    cy.writeJsonToFile("cypressoutputData.json", {
+    cy.writeJsonToFile(testData.commonTestData.outData_path, {
       username: randomString,
     });
     cy.fillTextbox(locators.pim.username_Txtbox, randomString);
-    cy.fillTextbox(locators.pim.password_TxtBox, "password123");
-    cy.fillTextbox(locators.pim.confirmPassword, "password123");
+    cy.fillTextbox(locators.pim.password_TxtBox, testData.pimPage.password);
+    cy.fillTextbox(locators.pim.confirmPassword, testData.pimPage.password);
   }
   clickSavebutton() {
     cy.clickElement(locators.pim.submit_Btn);

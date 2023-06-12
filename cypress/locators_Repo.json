@@ -45,5 +45,11 @@
         "rec":"Record Found",
         "deleteIcon":".oxd-icon.bi-trash",
         "yesDelete":"button[class='oxd-button oxd-button--medium oxd-button--label-danger orangehrm-button-margin']"
+    },
+    "mmtLocator":{
+        "offer_link":".vwallofer[href='https://www.easemytrip.com/deals.html']",
+        "amazingOffr_txt":".head_r_text",
+        "flightOffer":"span"
+    
     }
 }

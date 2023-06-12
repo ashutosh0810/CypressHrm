@@ -1,6 +1,6 @@
 import signIn_Element from "../pageElements/signIn_Element";
 const locators = require("../../locators_Repo.json");
-
+const testData = require("../../testData.json");
 let randomString = Math.random().toString(36).slice(2, 7);
 export default class signin_PO {
   constructor() {
@@ -20,7 +20,7 @@ export default class signin_PO {
     signIn_Elements.wrongCredentialsTxt().should("be.visible");
   }
   loginPageTitle() {
-    cy.title().should("eq", "OrangeHRM");
+    cy.title().should("eq", testData.signInPage.pageTitle);
   }
 
   launchSigninPage() {
@@ -28,7 +28,10 @@ export default class signin_PO {
   }
 
   validateInvalidCreden() {
-    cy.validateText(locators.loginPage.invalidCred_txt, "Invalid credentials");
+    cy.validateText(
+      locators.loginPage.invalidCred_txt,
+      testData.signInPage.partialtxt
+    );
   }
 
   clickforgetpwd() {
@@ -41,7 +44,7 @@ export default class signin_PO {
   validateResetSucc() {
     cy.validateText(
       locators.loginPage.resetSucces_Txt,
-      "Reset Password link sent successfully"
+      testData.signInPage.pwdResetSuccessTxt
     );
   }
 }

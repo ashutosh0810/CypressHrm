@@ -25,6 +25,7 @@ module.exports = defineConfig({
     baseUrl: "https://opensource-demo.orangehrmlive.com/",
     userId: "Admin",
     password: "admin123",
+    newTaburl: "https://www.easemytrip.com/",
   },
   retries: {
     runMode: 1,
@@ -35,8 +36,12 @@ module.exports = defineConfig({
 
     watchForFileChanges: true,
     //specPattern: ["cypress/e2e_integration/*.js"],
-    //specPattern: ["cypress/e2e_integration/feature/*.feature"],
-    specPattern: "cypress/e2e_integration/feature/*.feature",
+    specPattern: [
+      "cypress/e2e_integration/feature/*.feature",
+      "cypress/e2e_integration/*.js",
+    ],
+    //specPattern: "cypress/e2e_integration/feature/*.feature",
     // baseUrl: "https://opensource-demo.orangehrmlive.com/",
   },
+  chromeWebSecurity: false,
 });

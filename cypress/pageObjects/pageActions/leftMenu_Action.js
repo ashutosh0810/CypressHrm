@@ -2,6 +2,7 @@ import signIn_Element from "../pageElements/signIn_Element";
 import leftMenu_Element from "../pageElements/leftMenu_Element";
 
 const locators = require("../../locators_Repo.json");
+const testData = require("../../testData.json");
 
 export default class leftMenuAction {
   constructor() {

@@ -1,0 +1,27 @@
+{
+    "commonTestData":{
+        "outData_path":"cypressoutputData.json"
+
+    },
+    "newTabTestcase":
+    {
+        "newPageUrl":"https://www.easemytrip.com/deals.html",
+        "flightOfferurl":"https://www.easemytrip.com/offers/flights.html",
+        "attributeRmv":"target",
+        "Offertxt":"Amazing Travel Offers and Deals",
+        "findBytxt":"Flight Offers"
+    },
+    "adminPgaeTestdata":{
+        "validPartialtxt":"Record Found"
+    },
+    "pimPage":{
+        "password":"password123",
+        "partialtxt":"Invalid credentials"
+    },
+    "signInPage":
+    {
+        "pageTitle":"OrangeHRM",
+        "partialtxt":"Invalid credentials",
+        "pwdResetSuccessTxt":"Reset Password link sent successfully"
+    }
+}

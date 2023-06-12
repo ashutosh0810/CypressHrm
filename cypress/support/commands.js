@@ -60,3 +60,15 @@ Cypress.Commands.add("validateText", (selector, expectedText) => {
       expect(text).to.eq(expectedText);
     });
 });
+
+Cypress.Commands.add("handleAppException", () => {
+  Cypress.on("uncaught:exception", (err, runnable) => {
+    // returning false here prevents Cypress from
+    // failing the test
+    return false;
+  });
+
+  Cypress.Commands.add("clickelementByTxt", (locator, targetTxt) => {
+    cy.get(locator).contains(targetTxt).click();
+  });
+});

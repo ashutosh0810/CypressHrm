@@ -1,6 +1,6 @@
 const locators = require("../../locators_Repo.json");
 const outData = require("../../../cypressoutputData.json");
-
+const testData = require("../../testData.json");
 export default class adminPage {
   enterUsername() {
     cy.log(" read the data from output ", outData.username);
@@ -11,7 +11,10 @@ export default class adminPage {
     cy.wait(7000);
   }
   validateRecord() {
-    cy.validatePartialText(locators.admin.rec, "Record Found");
+    cy.validatePartialText(
+      locators.admin.rec,
+      testData.adminPgaeTestdata.validPartialtxt
+    );
   }
   deleteRecord() {
     cy.forceclickElement(locators.admin.deleteIcon);
