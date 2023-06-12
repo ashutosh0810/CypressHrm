@@ -82,12 +82,14 @@ case $choice in
     ;;
 esac
 # Open the report
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    xdg-open cypress/reports/html/index.html
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-    open cypress/reports/html/index.html
-elif [[ "$OSTYPE" == "cygwin" || "$OSTYPE" == "msys" || "$OSTYPE" == "win32" ]]; then
-    start cypress/reports/html/index.html
-else
-    echo "Cannot automatically open file in browser. Please manually open cypress/reports/html/index.html"
+if [[ $choice -ne 11 && $choice -ne 12 && $choice -ne 13 ]]; then
+  if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+      xdg-open cypress/reports/html/index.html
+  elif [[ "$OSTYPE" == "darwin"* ]]; then
+      open cypress/reports/html/index.html
+  elif [[ "$OSTYPE" == "cygwin" || "$OSTYPE" == "msys" || "$OSTYPE" == "win32" ]]; then
+      start cypress/reports/html/index.html
+  else
+      echo "Cannot automatically open file in browser. Please manually open cypress/reports/html/index.html"
+  fi
 fi
