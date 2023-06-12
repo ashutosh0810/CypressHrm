@@ -67,8 +67,7 @@ Cypress.Commands.add("handleAppException", () => {
     // failing the test
     return false;
   });
-
-  Cypress.Commands.add("clickelementByTxt", (locator, targetTxt) => {
-    cy.get(locator).contains(targetTxt).click();
-  });
+});
+Cypress.Commands.add("clickelementByTxt", (locator, targetTxt) => {
+  cy.get(locator).contains(targetTxt).click();
 });
