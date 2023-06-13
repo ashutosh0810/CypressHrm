@@ -12,11 +12,14 @@
         "findBytxt":"Flight Offers"
     },
     "adminPgaeTestdata":{
-        "validPartialtxt":"Record Found"
+        "validPartialtxt":"Record Found",
+        "userRole":"Admin"
     },
     "pimPage":{
         "password":"password123",
-        "partialtxt":"Invalid credentials"
+        "partialtxt":"Invalid credentials",
+        "jobTitleOptions":"Chief Executive Officer",
+        "successtxt":"Success"
     },
     "signInPage":
     {

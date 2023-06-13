@@ -2,12 +2,14 @@ Feature: Login Functionality
 
 
     #This is to validate the login Functionality
-
-    Scenario: Verify application getting logged in successfully
+    @smoke
+    Scenario: Verify application getting logged in successfully with Valid Credentials
         Given User launch the application
         When User enter the credentials
         Then Verify the login page title
 
+
+    @smoke
     Scenario Outline: Verify application login with wrong credentials
         Given User launch the application
         When User enter "<username>" as the username and "<password>" as the password

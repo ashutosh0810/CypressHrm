@@ -21,6 +21,8 @@ echo "10. Run all tests on multiple browsers"
 echo "11. Run all tests with dashboard recording"
 echo "12. Run all tests with dashboard recording on Chrome"
 echo "13. Exit"
+echo "14. Run all tests with tags on Chrome"
+echo "15. Run all tests with tag headless"
 
 read -p "Enter your choice: " choice
 

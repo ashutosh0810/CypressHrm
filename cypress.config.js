@@ -26,11 +26,14 @@ module.exports = defineConfig({
     userId: "Admin",
     password: "admin123",
     newTaburl: "https://www.easemytrip.com/",
+    GETapi: "https://reqres.in/api/users/2",
+    POSTapi: "https://reqres.in/api/users",
   },
   retries: {
-    runMode: 1,
+    runMode: 0,
     openMode: 0,
   },
+
   e2e: {
     setupNodeEvents,
 
@@ -44,4 +47,6 @@ module.exports = defineConfig({
     // baseUrl: "https://opensource-demo.orangehrmlive.com/",
   },
   chromeWebSecurity: false,
+  screenshotOnRunFailure: true,
+  screenshotFolder: "cypress/screenshots",
 });

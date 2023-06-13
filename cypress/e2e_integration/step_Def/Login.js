@@ -1,5 +1,5 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import signin_PO from "../../pageObjects/pageActions/signin_Actions";
+import signin_PO from "../../pageObjects/pageActions/signin_PO";
 const signin_obj = new signin_PO();
 
 let userNameex;
@@ -17,7 +17,6 @@ Then("Verify the login page title", function () {
 });
 
 // This is for multiple username and password
-
 When(
   "User enter {string} as the username and {string} as the password",
   (uname, pwd) => {

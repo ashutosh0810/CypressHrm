@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pretest": "rm -rf cypress\reports",
+    "pretest": "rm -rf cypress\reports && rm -rf cypress/screenshots",
     "cypress:open": "npx cypress open",
     "allTests-headless": "npx cypress run",
     "allTests-headed": "npx cypress run --headed",
@@ -17,7 +17,8 @@
     "allTests-edge-headed": "npx cypress run --browser edge --headed",
     "allTests-multiBrowser": "npm run allTests-headed -- --browser firefox & npm run allTests-headed -- --browser chrome",
     "allTest-dashBoard": "npx cypress run --record --key 66f0472e-b570-4fe6-92d2-dd12bdfec096",
-    "allTest-dashBoard-chrome": "npx cypress run --record --key 66f0472e-b570-4fe6-92d2-dd12bdfec096 --browser chrome"
+    "allTest-tags":"npx cypress run --env TAGS='@smoke or @focus'",
+    "allTest-tags-chrome": "npx cypress run --env TAGS=''@smoke or @focus' --browser chrome --headed"
   },
   "cypress-cucumber-preprocessor": {
     "stepDefinitions": "cypress/e2e_integration/step_Def/*.js",

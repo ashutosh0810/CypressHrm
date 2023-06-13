@@ -9,59 +9,77 @@ describe("Login functionality Test2 ", function () {
   });
 });
 
-describe("GET Request", () => {
-  it("should fetch a single user", () => {
-    cy.request("GET", "https://reqres.in/api/users/2").then((response) => {
-      // Verify the returned data
-      expect(response.body).to.have.property("data");
-      expect(response.body.data).to.be.an("object");
-      expect(response.body.data).to.have.property("id", 2);
-      expect(response.body.data).to.have.property(
-        "email",
-        "janet.weaver@reqres.in"
-      );
-      expect(response.body.data).to.have.property("first_name", "Janet");
-      expect(response.body.data).to.have.property("last_name", "Weaver");
-      expect(response.body.data).to.have.property(
-        "avatar",
-        "https://reqres.in/img/faces/2-image.jpg"
-      );
+describe("GET Request", function () {
+  before(function () {
+    cy.fixture("getResponse.json").as("expectedResponse");
+  });
 
-      // Verify the support information
-      expect(response.body).to.have.property("support");
-      expect(response.body.support).to.be.an("object");
-      expect(response.body.support).to.have.property(
-        "url",
-        "https://reqres.in/#support-heading"
-      );
-      expect(response.body.support).to.have.property(
-        "text",
-        "To keep ReqRes free, contributions towards server costs are appreciated!"
-      );
+  it("should fetch a single user", function () {
+    cy.request("GET", Cypress.env("GETapi")).then((response) => {
+      expect(response.status).to.eq(200);
+      expect(response.body).to.deep.equal(this.expectedResponse);
     });
   });
 });
 
-describe("POST Request", () => {
-  it("should create a new user", () => {
+// describe("POST Request", function() {
+//   it("should create a new user",function() {
+//     cy.request({
+//       method: "POST",
+//       url: Cypress.env("POSTapi"),
+//       body: {
+//         name: "morpheus",
+//         job: "leader",
+//       },
+//     }).then((response) => {
+//       // Verify status code
+//       expect(response.status).to.eq(201);
+
+//       // Verify the returned data
+//       expect(response.body).to.have.property("name", "morpheus");
+//       expect(response.body).to.have.property("job", "leader");
+//       //expect(response.body).to.have.property("id", "415");
+//       expect(response.body)
+//         .to.have.property("createdAt")
+//         .and.match(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z/);
+//     });
+//   });
+// });
+
+describe("POST Request", function () {
+  beforeEach(function () {
+    cy.fixture("newUser.json").as("newUser");
+    cy.fixture("expectedPostResponse.json").as("expectedPostResponse");
+  });
+
+  it("should create a new user", function () {
     cy.request({
       method: "POST",
-      url: "https://reqres.in/api/users",
-      body: {
-        name: "morpheus",
-        job: "leader",
-      },
+      url: Cypress.env("POSTapi"),
+      body: this.newUser,
     }).then((response) => {
       // Verify status code
       expect(response.status).to.eq(201);
 
       // Verify the returned data
-      expect(response.body).to.have.property("name", "morpheus");
-      expect(response.body).to.have.property("job", "leader");
-      //expect(response.body).to.have.property("id", "415");
+      expect(response.body).to.have.property(
+        "name",
+        this.expectedPostResponse.name
+      );
+      expect(response.body).to.have.property(
+        "job",
+        this.expectedPostResponse.job
+      );
+
+      // Validate id is a string of digits
+      expect(response.body).to.have.property("id").and.match(/^\d+$/);
+
+      // Validate createdAt is in a specific date-time format
       expect(response.body)
         .to.have.property("createdAt")
         .and.match(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z/);
     });
+    // Take a screenshot
+    cy.screenshot("POST-request-response");
   });
 });

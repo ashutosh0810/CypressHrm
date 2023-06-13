@@ -2,11 +2,12 @@ import signIn_Element from "../pageElements/signIn_Element";
 const locators = require("../../locators_Repo.json");
 const testData = require("../../testData.json");
 let randomString = Math.random().toString(36).slice(2, 7);
-export default class signin_PO {
+export default class signinPage {
   constructor() {
     globalThis.signIn_Elements = new signIn_Element();
   }
 
+  // this will enter the credentials and do the validation
   enterCredentials(userName, pswd) {
     cy.log(" this is username and password ", userName, pswd);
     signIn_Elements.usernameTxtBx().should("be.visible");

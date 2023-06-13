@@ -1,7 +1,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-import leftMenu_PO from "../../pageObjects/pageActions/leftMenu_Action";
-import pimPageOject from "../../pageObjects/pageActions/pim_Actions";
+import leftMenu_PO from "../../pageObjects/pageActions/leftMenu_PO";
+import pimPageOject from "../../pageObjects/pageActions/pim_PO";
 import personalDetailspageObj from "../../pageObjects/pageActions/personalDeatails_PO";
 
 const leftmenu_obj = new leftMenu_PO();
@@ -41,4 +41,8 @@ Then("User enter the personal details", () => {
 });
 Then("User click the personal details page save button", () => {
   persDetail_obj.clickSaveBtn();
+});
+
+Then("User should see success message", () => {
+  cy.contains("Success").should("be.visible");
 });

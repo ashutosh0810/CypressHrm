@@ -18,8 +18,8 @@
         "cancel_Btn": "button[type='button']"
     },
     "leftmenu": {
-        "pimLeft_Btn": "body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > a:nth-child(1) > span:nth-child(2)",
-        "adminleft_Btn":"body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2)"
+        "pimLeft_Btn": "a[href='/web/index.php/pim/viewPimModule']",
+        "adminleft_Btn":"a[href='/web/index.php/admin/viewAdminModule']"
     },
     "pim": {
         "add_Btn": "button[class='oxd-button oxd-button--medium oxd-button--secondary']",
@@ -30,7 +30,13 @@
         "username_Txtbox": "body > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > form:nth-child(3) > div:nth-child(1) > div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)",
         "password_TxtBox": "div[class='oxd-grid-item oxd-grid-item--gutters user-password-cell'] div[class='oxd-input-group oxd-input-field-bottom-space'] div input[type='password']",
         "confirmPassword": "div[class='oxd-grid-item oxd-grid-item--gutters'] div[class='oxd-input-group oxd-input-field-bottom-space'] div input[type='password']",
-        "submit_Btn": "button[type='submit']"
+        "submit_Btn": "button[type='submit']",
+        "jobTitlte_DropDwn":"body > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > form:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1)",
+        "jobTitleOptn_Dropdown":".oxd-select-option span",
+        "firstRecordEdit_icon":".oxd-table-cell-actions > :nth-child(2) > .oxd-icon",
+        "successTxt":"oxd-text oxd-text--p oxd-text--toast-message oxd-toast-content-text"
+
+
     },
     "personalDetails": {
         "maritalstat_Dropdwn": "body > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > form:nth-child(3) > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1)",
@@ -44,7 +50,9 @@
         "search_Btn":"button[type='submit']",
         "rec":"Record Found",
         "deleteIcon":".oxd-icon.bi-trash",
-        "yesDelete":"button[class='oxd-button oxd-button--medium oxd-button--label-danger orangehrm-button-margin']"
+        "yesDelete":"button[class='oxd-button oxd-button--medium oxd-button--label-danger orangehrm-button-margin']",
+        "userRole_DropDown":":nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text",
+        "userRoleOption_DropDown":".oxd-select-option span"
     },
     "mmtLocator":{
         "offer_link":".vwallofer[href='https://www.easemytrip.com/deals.html']",

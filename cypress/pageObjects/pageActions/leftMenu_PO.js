@@ -4,11 +4,13 @@ import leftMenu_Element from "../pageElements/leftMenu_Element";
 const locators = require("../../locators_Repo.json");
 const testData = require("../../testData.json");
 
-export default class leftMenuAction {
+export default class leftMenuPage {
+  // Creating constructor
   constructor() {
     globalThis.leftmenu_Elements = new leftMenu_Element();
   }
 
+  // This function will take menu option as paramete and click left side menu
   clickLeftOption(menuOption) {
     cy.log("This will click the menuOption as pased ", menuOption);
     if (menuOption == "PIM") {
@@ -26,5 +28,6 @@ export default class leftMenuAction {
     }
   }
 
+  // this will read output file
   readOutputFile() {}
 }
