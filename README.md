@@ -53,3 +53,7 @@
 1.  cucumber gherkin full support
 2.  Playwright/Cypress steps defination generator
 3.  Prettier
+
+## Note
+
+Spec screenshots has been attached with 7 specs on the drive.
