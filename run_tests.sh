@@ -19,9 +19,9 @@ echo "8. Run all tests on Edge"
 echo "9. Run all tests on Edge (headed)"
 echo "10. Run all tests on multiple browsers"
 echo "11. Run all tests with dashboard recording"
-echo "12. Run all tests with dashboard recording on Chrome"
+# echo "12. Run all tests with dashboard recording on Chrome"
 echo "13. Exit"
-echo "14. Run all tests with tags on Chrome"
+# echo "14. Run all tests with tags on Chrome"
 echo "15. Run all tests with tag headless"
 
 read -p "Enter your choice: " choice
@@ -71,9 +71,9 @@ case $choice in
     echo "You selected 'Run all tests with dashboard recording'"
     npm run allTest-dashBoard
     ;;
-  12)
-    echo "You selected 'Run all tests with dashboard recording on Chrome'"
-    npm run allTest-dashBoard-chrome
+  15)
+    echo "Run all tests with tag headless'"
+    npm run allTest-tags
     ;;
   13)
     echo "Exiting."

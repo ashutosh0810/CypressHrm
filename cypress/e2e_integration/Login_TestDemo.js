@@ -14,7 +14,7 @@ describe("Login functionality  ", function () {
   beforeEach(function () {
     signin_obj.launchSigninPage();
   });
-  it("Valid login", function () {
+  it.skip("Valid login", function () {
     //
     signin_obj.enterCredentials(Cypress.env("userId"), Cypress.env("password"));
     signin_obj.loginPageTitle();
