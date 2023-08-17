@@ -1,25 +1,31 @@
-pipeline {
-  agent {
-    // this image provides everything needed to run Cypress
-    docker {
-      image 'cypress/base:18.14.1'
+pipeline{
+  agent any
+
+
+  parameters {
+    string(name: 'SPEC' , defaultValue: "cypress/e2e_integration/**/**/")
+    choice(name: 'BROWSER', ['chrome','edge'],description:' choice the browser')
+
+  }
+
+  stages{
+    stage('deploying')
+    {
+      echo 'Building the project'
+    }
+
+    stage('Testing')
+    {
+      steps
+      {
+        bat "npn i"
+        bat "npx cypress run --browser chrome --spec  ${SPEC}"
+      }
     }
   }
 
-  stages {
-    stage('build and test') {
-      environment {
-        // we will be recording test results and video on Cypress Cloud
-        // to record we need to set an environment variable
-        // we can load the record key variable from credentials store
-        // see https://jenkins.io/doc/book/using/using-credentials/
-        // CYPRESS_RECORD_KEY = credentials('cypress-example-kitchensink-record-key')
-      }
 
-      steps {
-        sh 'npm ci'
-        sh "npm run test:ci:record"
-      }
-    }
-  }
+
+
+
 }
