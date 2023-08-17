@@ -9,10 +9,15 @@ pipeline{
   }
 
   stages{
-    stage('deploying')
-    {
-      echo 'Building the project'
-    }
+    stage('Checkout from GitHub') {
+            steps {
+                // Checkout from the Git repository and branch
+                git(
+                    url: 'https://github.com/ashutosh0810/CypressHrm.git',
+                    branch: 'feature'
+                )
+            }
+        }
 
     stage('Testing')
     {
