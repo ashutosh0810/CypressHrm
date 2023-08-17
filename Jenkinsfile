@@ -3,8 +3,8 @@ pipeline{
 
 
   parameters {
-    string(name: 'SPEC' , defaultValue: "cypress/e2e_integration/apiTest.js", choices :['cypress/e2e_integration/apiTest.js','cypress/e2e_integration/**/**/'], description : ' select the spec file ')
-    choice(name: 'BROWSER', defaultValue :'Chrome' , choices: ['chrome','edge'], description:' Select the browser')
+    string(name: 'SPEC' , defaultValue: "cypress/e2e_integration/apiTest.js", description : ' select the spec file ')
+    choice(name: 'BROWSER',choices: ['chrome','edge'], description:' Select the browser')
 }
 
   stages{
