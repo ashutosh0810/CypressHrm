@@ -10,13 +10,14 @@ pipeline{
 
   stages{
    
-    stage('deploying')
+    stage('start')
     {
       steps {
-      echo 'Building the project' }
+      echo 'Building the project' 
+      }
     }
 
-    stage('Checkout from GitHub') {
+    stage('build') {
             steps {
                 // Checkout from the Git repository and branch
                 git(
@@ -26,7 +27,7 @@ pipeline{
             }
         }
 
-    stage('Testing')
+    stage('test')
     {
       steps
       {
@@ -38,7 +39,7 @@ pipeline{
     stage ('deploying ')
     {
       steps{
-        echo 'deploying '
+        echo 'deploying not implemented'
       }
       
     }
