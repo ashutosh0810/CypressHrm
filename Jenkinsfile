@@ -4,7 +4,7 @@ pipeline{
 
   parameters {
     string(name: 'SPEC' , defaultValue: "cypress/e2e_integration/apiTest.js")
-    choice(name: 'BROWSER', selectBrowser: ['chrome','edge'], description:' choice the browser')
+    choice(name: 'BROWSER', choices : ['chrome','edge'], description:' choice the browser')
 }
 
   stages{
