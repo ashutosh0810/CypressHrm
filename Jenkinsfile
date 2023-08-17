@@ -23,7 +23,7 @@ pipeline{
     {
       steps
       {
-        bat "npn i"
+        bat "npm i"
         bat "npx cypress run --browser chrome --spec  ${SPEC}"
       }
     }
